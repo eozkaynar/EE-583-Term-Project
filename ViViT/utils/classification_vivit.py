@@ -12,6 +12,7 @@ import tqdm
 import csv
 import os
 
+@click.command("classification")
 @click.option("--output", type=click.Path(file_okay=False), default="output/vivit")
 @click.option("--hyperparameter_dir", type=click.Path(file_okay=False), default="hyperparameter_outputs")
 @click.option("--hyperparameter", type=bool, default=False)

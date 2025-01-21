@@ -5,15 +5,12 @@ In this work ViViT model-1 is implemented.
 
 Dataset
 -------
-OrganMNIST3D is part of the MedMNIST [1] collection, specifically designed for 3D medical image classification. This dataset consists of 3D CT (Computed Tomography) images, each represented as a 3D array with dimensions of 28×28×28. The organ classes represented in the dataset include the liver, right kidney, left kidney, right femur, left femur, bladder, heart, right lung, left lung, spleen, and pancreas. The dataset is divided into three subsets: a training set with 971 samples, a validation set with 161 samples, and a test set with 610 samples[2].
+OrganMNIST3D is part of the MedMNIST [2] collection, specifically designed for 3D medical image classification. This dataset consists of 3D CT (Computed Tomography) images, each represented as a 3D array with dimensions of 28×28×28. The organ classes represented in the dataset include the liver, right kidney, left kidney, right femur, left femur, bladder, heart, right lung, left lung, spleen, and pancreas. The dataset is divided into three subsets: a training set with 971 samples, a validation set with 161 samples, and a test set with 610 samples[2].
 
 
-
-| Normal                                 | Low Ejection Fraction                  | Arrhythmia                             |
-| ------                                 | ---------------------                  | ----------                             |
-| ![](docs/media/0X10A28877E97DF540.gif) | ![](docs/media/0X129133A90A61A59D.gif) | ![](docs/media/0X132C1E8DBB715D1D.gif) |
-| ![](docs/media/0X1167650B8BEFF863.gif) | ![](docs/media/0X13CE2039E2D706A.gif ) | ![](docs/media/0X18BA5512BE5D6FFA.gif) |
-| ![](docs/media/0X148FFCBF4D0C398F.gif) | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
+                           
+| ------                               
+| ![](docs/OrganMNIST3D.gif) 
 
 The code implementation in this study builds upon the robust framework established by Gosthipaty and Thakur [3], whose work provided a foundational basis for the design and experimentation of the ViViT model.
 
@@ -22,47 +19,39 @@ Installation
 
 First, clone this repository and enter the directory by running:
 
-    git clone https://github.com/echonet/dynamic.git
-    cd dynamic
-
-The model is implemented for Python 3, and depends on the following packages:
-  - NumPy
-  - PyTorch
-  - Torchvision
-  - OpenCV
-  - skimage
-  - sklearn
-  - tqdm
+    git clone https://github.com/eozkaynar/EE-583-Term-Project
+    
 
 Code dependencies can be installed using
 
     pip install -r 'requirements.txt'
+
+The model can be installed using
+    pip install .
 
 Usage
 -----
 
 ### Running Code
 
-EchoNet-Dynamic has three main components: segmenting the left ventricle, predicting ejection fraction from subsampled clips, and assessing 
 
 #### Classification with ViViT
 
-    echonet segmentation --save_video
+    python ViViT/utils/classification_vivit.py
 
 This creates a directory named `output/vivit/`, which will contain
   - log.csv: training and validation losses
-  - best.pt: checkpoint of weights for the model with the lowest validation loss
-  - size.csv: estimated size of left ventricle for each frame and indicator for beginning of beat
-  - videos: directory containing videos with segmentation overlay
+  - plot of training and validation losses
+  - confusion matrix
 
 #### Classification with 3D CNN model
 
-  echonet video
+    python ViViT/utils/classification_3DCNN.py
 
 This creates a directory named `output/cnn3d/`, which will contain
   - log.csv: training and validation losses
-  - best.pt: checkpoint of weights for the model with the lowest validation loss
-  - test_predictions.csv: ejection fraction prediction for subsampled clips
+  - plot of training and validation losses
+  - confusion matrix
 
 ### Hyperparameter Test
 

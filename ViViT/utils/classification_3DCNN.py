@@ -13,7 +13,6 @@ import csv
 import os
 
 
-@click.command("classification")
 @click.option("--output", type=click.Path(file_okay=False), default="output/cnn3d")
 @click.option("--num_epochs", type=int, default=60)
 @click.option("--lr", type=float, default=1e-4)
