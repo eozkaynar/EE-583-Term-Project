@@ -1,0 +1,24 @@
+# Python Virtual Environment
+venv/
+
+# Output directories
+output/
+hyperparameter_outputs/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Genel Geçici Dosyalar
+*.tmp
+*.swp
+*.log
+
+# MacOS için
+.DS_Store
+
+# IDE'ler ve Editörler
+.idea/
+.vscode/
+
+ViViT.egg-info

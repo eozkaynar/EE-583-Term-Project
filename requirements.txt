@@ -1,0 +1,12 @@
+torch
+torchvision
+scikit-learn
+tqdm
+numpy
+pandas
+opencv-python
+vidaug
+scikit-image
+matplotlib
+medmnist
+click
