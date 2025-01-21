@@ -9,7 +9,7 @@ OrganMNIST3D is part of the MedMNIST [2] collection, specifically designed for 3
 
 
                            
-| ------                               
+                             
 | ![](docs/OrganMNIST3D.gif) 
 
 The code implementation in this study builds upon the robust framework established by Gosthipaty and Thakur [3], whose work provided a foundational basis for the design and experimentation of the ViViT model.
