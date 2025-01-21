@@ -20,6 +20,8 @@ Installation
 First, clone this repository and enter the directory by running:
 
     git clone https://github.com/eozkaynar/EE-583-Term-Project
+
+Then it is recommended to set up a virtual environment
     
 
 Code dependencies can be installed using
