@@ -28,7 +28,8 @@ Code dependencies can be installed using
 
     pip install -r 'requirements.txt'
 
-The model can be installed using
+Then you should install the model using
+
     pip install .
 
 Usage
